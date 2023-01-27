@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!square.classList.contains('checked') && (flags < bombAmount)) {
                 if (!square.classList.contains('flag')) {
                     square.classList.add('flag');
-                    square.style.backgroundImage = "url('/assets/img/flag.svg')";
+                    square.style.backgroundImage = "url('https://vasquesjp.github.io/minesweeper/assets/img/flag.svg')";
                     square.style.backgroundRepeat= "no-repeat";
                     square.style.backgroundPosition= "center center";
                     square.style.backgroundSize= "35px 35px";
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             squares.forEach(square => {
                 if (square.classList.contains('bomb')) {
-                    square.style.backgroundImage = "url('/assets/img/bomb.svg')";
+                    square.style.backgroundImage = "url('https://vasquesjp.github.io/minesweeper/assets/img/bomb.svg')";
                     square.style.backgroundRepeat= "no-repeat";
                     square.style.backgroundPosition= "center center";
                     square.style.backgroundSize= "35px 35px";
