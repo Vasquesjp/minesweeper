@@ -1,0 +1,342 @@
+*,
+*::after,
+*::before {
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: TTFont;
+    src: url("../../assets/fonts/TTFont.otf") format("opentype");
+}
+@font-face {
+    font-family: Pixel LCD7;
+    src: url("../../assets/fonts/pixel_lcd_7.ttf");
+}
+
+body {
+    background-color: black;
+    font-family: 'TTFont';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 280px;
+}
+
+img.background {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -999999;
+        opacity: 0.8;
+}
+
+h1 {
+    height: 40px;
+    width: 400px;
+    background-color: #00007B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 2px solid #C0C0C0;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: white;
+}
+
+h1 img {
+    width: 30px;
+}
+.content {
+    margin-top: 100px;
+    box-shadow: 0px 10px 50px 57px rgba(0,0,0,0.7);
+}
+.menu {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #C0C0C0;;
+}
+.menu .menuContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid #808080;
+    border-bottom: 4px solid #808080;
+    width:392px;
+    height: 392px;
+}
+.menu .menuContent img {
+    width: 250px;
+}
+
+.menu .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+.menu .startGame,
+.bottom button {
+    background-color: #C0C0C0;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid #808080;
+    border-bottom: 4px solid #808080;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 6px;
+}
+
+.menu .startGame:hover,
+.bottom button:hover {
+    cursor: pointer;
+    border-top: 4px solid #808080;
+    border-left:4px solid #808080;
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+    color: black;
+}
+
+.grid {
+    height: 400px;
+    width: 400px;
+    display: none;
+    flex-wrap: wrap;
+    background-color: #C0C0C0;
+}
+
+.grid div {
+    height: 40px;
+    width: 40px;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid #808080;
+    border-bottom: 4px solid #808080;
+    cursor: pointer;
+}
+
+.grid .checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C0C0C0;
+    border-top: 2px solid #808080;
+    border-left: 2px solid #808080;
+    border-right: none;
+    border-bottom: none;
+}
+
+.bomb  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+div .bomb.checked {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0000;
+    box-shadow: none;
+    border: 1px dotted black;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+}
+
+.bottom {
+    width: 400px;
+    height: auto;
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #C0C0C0;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-right: 4px solid #808080;
+    border-bottom: 4px solid #808080;
+}
+
+.bottom .score {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.bottom .score img {
+    width: 40px;
+}
+
+.bottom .score .flags {
+    width: 150px;
+    height: 40px;
+    background-color: #000;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    font-family: 'Pixel LCD7';
+    font-size: 2.375rem;
+    color: #FB0007;
+}
+.bottom .score .bombs {
+    width:60px;
+    height: 40px;
+    background-color: #000;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Pixel LCD7';
+    font-size: 2.375rem;
+    color: #FB0007;
+}
+
+.bottom .status{
+    width: 320px;
+    height: 40px;
+    background-color: #000;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid #808080;
+    border-bottom: 2px solid #808080;
+    margin-bottom: 20px;
+    font-family: 'Pixel LCD7';
+    font-size: 2.375rem;
+    color: #6B0001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.bottom .menu2 {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: #00007B;
+    color: #fff;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+}
+
+@media (max-width: 400px) {
+    h1 {
+        height: 28px;
+        width: 280px;
+        font-size: 1.3rem;
+    }
+    h1 img {
+        width: 18px;
+    }
+    .menu {
+        height: 280px;
+        width: 280px;
+    }
+    .menu .menuContent {
+        width: 272px;
+        height: 272px;
+    }
+    .menu .menuContent img {
+        width: 175px;
+    }
+    .menu .controls{
+        gap: 5px;
+    }
+    .menu .startGame {
+        font-size: 1.3rem;
+    }
+    .grid {
+        width: 280px;
+        height: 280px;
+    }
+    .grid div {
+        width: 28px;
+        height: 28px;
+    }
+    .flag {
+        background-size: 18px !important;
+    }
+    .bomb  {
+    background-size: 18px !important;
+    }
+    .bottom {
+        width: 280px;
+    }
+    .bottom .score {
+        width: 224px;
+        margin: 10px 0;
+    }
+    .bottom .score img {
+        width: 26px;
+    }
+    .bottom .score .flags {
+        width: 75px;
+        height: 28px;
+        font-size: 1.2rem;
+    }
+    .bottom .score .bombs {
+        width: 35px;
+        height: 28px;
+        font-size: 1.2rem;
+    }
+    .bottom .status {
+        width: 224px;
+        height: 28px;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    .bottom .menu2 {
+        width: 224px;
+        margin-bottom: 10px;
+    }
+    .bottom button {
+        font-size: 1.2rem;
+    }
+}
