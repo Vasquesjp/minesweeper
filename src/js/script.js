@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10)
         }
         function gameOver(square) {
-            status.innerHTML = 'VOCE PERDEU';
+            status.innerHTML = '<marquee dicrection="left"> VOCE PERDEU <img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src=".https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /></marquee>';
             status.style.color = '#FB0007';
             isGameOver = true;
     
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         function checkForWin() {
             if (matches === bombAmount) {
-            status.innerHTML = 'VOCE GANHOU';
+            status.innerHTML = '<marquee dicrection="left"> VOCE GANHOU <img src="https://vasquesjp.github.io/minesweeper/assets/img/happy.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/happy.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/happy.svg" /></marquee>';
             status.style.color = '#FB0007';
             isGameOver = true;
             } else { }

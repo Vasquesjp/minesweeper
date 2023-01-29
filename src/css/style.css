@@ -240,10 +240,14 @@ div .bomb.checked {
     font-size: 2.375rem;
     color: #6B0001;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items:center;
+    justify-content:center;
 }
 
+.status marquee img {
+    width:32px;
+    height: 32px;
+}
 
 .bottom .menu2 {
     width: 320px;
