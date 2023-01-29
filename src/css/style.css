@@ -336,6 +336,10 @@ a {
         font-size: 1.6rem;
         margin-bottom: 10px;
     }
+    .status marquee img {
+        width:22px;
+        height: 22px;
+    }
     .bottom .menu2 {
         width: 224px;
         margin-bottom: 10px;
