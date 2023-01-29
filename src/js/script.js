@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10)
         }
         function gameOver(square) {
-            status.innerHTML = '<marquee dicrection="left"> VOCE PERDEU <img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src=".https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /></marquee>';
+            status.innerHTML = '<marquee dicrection="left"> VOCE PERDEU <img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /></marquee>';
             status.style.color = '#FB0007';
             isGameOver = true;
     
