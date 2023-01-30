@@ -87,7 +87,6 @@ h1 img {
 .menu .menuContent img {
     width: 250px;
 }
-
 .menu .controls {
     display: flex;
     align-items: center;
@@ -96,7 +95,6 @@ h1 img {
     flex-wrap: nowrap;
     gap: 40px;
 }
-
 .menu .startGame,
 .bottom button {
     background-color: #C0C0C0;
@@ -110,7 +108,6 @@ h1 img {
     color: #fff;
     padding: 6px;
 }
-
 .menu .startGame:hover,
 .bottom button:hover {
     cursor: pointer;
