@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const status = document.querySelector('.status');
     const bombsShow = document.querySelector('.bombs');
     const flagsShow = document.querySelector('.flags');
+    const urlSite = "jvasques.github.io"
     let width = 10;
     let squares = [];
     let bombAmount = 0;
@@ -121,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!square.classList.contains('checked') && (flags < bombAmount)) {
                 if (!square.classList.contains('flag')) {
                     square.classList.add('flag');
-                    square.style.backgroundImage = "url('https://vasquesjp.github.io/minesweeper/assets/img/flag.svg')";
+                    square.style.backgroundImage = "url('https://" + urlSite + "/minesweeper/assets/img/flag.svg')";
                     square.style.backgroundRepeat= "no-repeat";
                     square.style.backgroundPosition= "center center";
                     square.style.backgroundSize= "35px 35px";
@@ -222,13 +223,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 10)
         }
         function gameOver(square) {
-            status.innerHTML = '<marquee dicrection="left"> VOCE PERDEU <img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/sad.svg" /></marquee>';
+            status.innerHTML = `<marquee dicrection="left"> VOCE PERDEU <img src="https://${urlSite}/minesweeper/assets/img/sad.svg" /><img src="https://${urlSite}/minesweeper/assets/img/sad.svg" /><img src="https://${urlSite}/minesweeper/assets/img/sad.svg" /></marquee>`;
             status.style.color = '#FB0007';
             isGameOver = true;
     
             squares.forEach(square => {
                 if (square.classList.contains('bomb')) {
-                    square.style.backgroundImage = "url('https://vasquesjp.github.io/minesweeper/assets/img/bomb.svg')";
+                    square.style.backgroundImage = "url('https://" + urlSite + "/minesweeper/assets/img/bomb.svg')";
                     square.style.backgroundRepeat= "no-repeat";
                     square.style.backgroundPosition= "center center";
                     square.style.backgroundSize= "35px 35px";
@@ -237,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         function checkForWin() {
             if (matches === bombAmount) {
-            status.innerHTML = '<marquee dicrection="left"> VOCE GANHOU <img src="https://vasquesjp.github.io/minesweeper/assets/img/happy.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/happy.svg" /><img src="https://vasquesjp.github.io/minesweeper/assets/img/happy.svg" /></marquee>';
+            status.innerHTML = `<marquee dicrection="left"> VOCE GANHOU <img src="https://${urlSite}/minesweeper/assets/img/happy.svg" /><img src="https://${urlSite}/minesweeper/assets/img/happy.svg" /><img src="https://${urlSite}/minesweeper/assets/img/happy.svg" /></marquee>`;
             status.style.color = '#FB0007';
             isGameOver = true;
             } else { }
